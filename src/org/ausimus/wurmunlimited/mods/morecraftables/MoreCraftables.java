@@ -70,7 +70,7 @@ public class MoreCraftables implements WurmServerMod, ServerStartedListener, Con
         MOC_TemplateID                  = Integer.parseInt(properties.getProperty       ("MOC_TemplateID",                  Integer.toString (MOC_TemplateID)));
         MOC_CraftingDifficulty          = Float.parseFloat(properties.getProperty       ("MOC_CraftingDifficulty",          Float.toString(MOC_CraftingDifficulty)));
         MOR_TemplateID                  = Integer.parseInt(properties.getProperty       ("MOR_TemplateID",                  Integer.toString (MOR_TemplateID)));
-        MOR_CraftingDifficulty          = Float.parseFloat(properties.getProperty("MOR_CraftingDifficulty", Float.toString(MOR_CraftingDifficulty)));
+        MOR_CraftingDifficulty          = Float.parseFloat(properties.getProperty       ("MOR_CraftingDifficulty", Float.toString(MOR_CraftingDifficulty)));
         MOE_TemplateID                  = Integer.parseInt(properties.getProperty       ("MOE_TemplateID",                  Integer.toString (MOE_TemplateID)));
         MOE_CraftingDifficulty          = Float.parseFloat(properties.getProperty       ("MOE_CraftingDifficulty",          Float.toString(MOE_CraftingDifficulty)));
         MOS_TemplateID                  = Integer.parseInt(properties.getProperty       ("MOS_TemplateID",                  Integer.toString (MOS_TemplateID)));
