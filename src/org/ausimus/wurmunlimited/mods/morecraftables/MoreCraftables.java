@@ -369,7 +369,8 @@ public class MoreCraftables implements WurmServerMod, ServerStartedListener, Con
             CreationEntryCreator.createSimpleEntry(SkillList.DIGGING, ItemList.shovel, ItemList.sapphireStar, ItemList.wandSculpting, true, true, 0.0f, false, false, CreationCategories.MAGIC);
             CreationEntryCreator.createSimpleEntry(SkillList.DIGGING, ItemList.shovel, ItemList.diamondStar, ItemList.wandSculpting, true, true, 0.0f, false, false, CreationCategories.MAGIC);
             CreationEntryCreator.createSimpleEntry(SkillList.DIGGING, ItemList.shovel, ItemList.opalBlack, ItemList.wandSculpting, true, true, 0.0f, false, false, CreationCategories.MAGIC);
-            CreationEntryCreator.createSimpleEntry(SkillList.LEATHERWORKING, ItemList.skinWater, ItemList.dragonScale, ItemList.bagKeeping, true, true, 0.0f, false, false, CreationCategories.CONTAINER);
+            AdvancedCreationEntry BOK = CreationEntryCreator.createAdvancedEntry(SkillList.LEATHERWORKING, ItemList.skinWater, ItemList.dragonScale, ItemList.bagKeeping, true, false, 0.0F, false, false, CreationCategories.CONTAINER);
+            BOK.addRequirement(new CreationRequirement(1, ItemList.blood, 1, true));
         }
         if(CanCraftFireWorks)
         {
