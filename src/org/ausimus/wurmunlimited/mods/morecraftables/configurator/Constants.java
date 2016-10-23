@@ -27,6 +27,9 @@ public class Constants {
     public static boolean CanCraftPotions;
     public static boolean CanCraftSeasonalItems;
     public static boolean CanCraftGraniteWand;
+    public static boolean CanCraftCavHelm;
+    //Debug
+    public static boolean Debug;
     //Staff of Land
     public static int SOL_TemplateID;
     public static float SOL_CraftingDifficulty;
@@ -104,4 +107,6 @@ public class Constants {
     //Seasonal Items
     public static int YuleGoatTemplateID;
     public static int YuleRainDeerTemplateID;
+    //Cavalier Helmet
+    public static int CavalierHelmetTemplateID;
 }

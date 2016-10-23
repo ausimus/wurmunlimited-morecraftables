@@ -1,6 +1,7 @@
 package org.ausimus.wurmunlimited.mods.morecraftables.items;
 import com.wurmonline.server.MiscConstants;
 import com.wurmonline.server.items.ItemTemplateCreator;
+import com.wurmonline.server.items.ItemTypes;
 import org.ausimus.wurmunlimited.mods.morecraftables.configurator.Constants;
 import java.io.IOException;
 public class AusItemTemplateCreator {
@@ -74,37 +75,37 @@ public class AusItemTemplateCreator {
             //Hota Statues
             //Deer
             ItemTemplateCreator.createItemTemplate(Constants.HOTA_DeerTemplateID, "Deer hota statue", "statues", "almost full", "somewhat occupied", "half-full", "emptyish", "This statue is the prize of a Hota tournament.",
-                    new short[]{108, 22, 51, 52, 92, 1, 32, 176, 199, 178, 44}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.deer.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
+                    new short[]{92, 32, 108, 135, 86, 25, 51, 52, 44, 67, 1, 176, 178}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.deer.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
             //Bear fighting Pig
             ItemTemplateCreator.createItemTemplate(Constants.HOTA_BearfightingBullTemplateID, "Bear and Bull hota statue", "statues", "almost full", "somewhat occupied", "half-full", "emptyish", "This statue is the prize of a Hota tournament.",
-                    new short[]{108, 22, 51, 52, 92, 1, 32, 176, 199, 178, 44}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.bearfightingbull.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
+                    new short[]{92, 32, 108, 135, 86, 25, 51, 52, 44, 67, 1, 176, 178}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.bearfightingbull.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
             //Dog Fighting Boar
             ItemTemplateCreator.createItemTemplate(Constants.HOTA_DogFightingBoarTemplateID, "Dog and Pig hota statue", "statues", "almost full", "somewhat occupied", "half-full", "emptyish", "This statue is the prize of a Hota tournament.",
-                    new short[]{108, 22, 51, 52, 92, 1, 32, 176, 199, 178, 44}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.dogsfightingboar.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
+                    new short[]{92, 32, 108, 135, 86, 25, 51, 52, 44, 67, 1, 176, 178}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.dogsfightingboar.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
             // Female Fighting Snake
             ItemTemplateCreator.createItemTemplate(Constants.HOTA_FemaleFightingAnacondaTemplateID, "Woman and Snake hota statue", "statues", "almost full", "somewhat occupied", "half-full", "emptyish", "This statue is the prize of a Hota tournament.",
-                    new short[]{108, 22, 51, 52, 92, 1, 32, 176, 199, 178, 44}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.femalefightinganaconda.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
+                    new short[]{92, 32, 108, 135, 86, 25, 51, 52, 44, 67, 1, 176, 178}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.femalefightinganaconda.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
             //Lady of The Lake
             ItemTemplateCreator.createItemTemplate(Constants.HOTA_LadyofTheLakeTemplateID, "Lady of The Lake hota statue", "statues", "almost full", "somewhat occupied", "half-full", "emptyish", "This statue is the prize of a Hota tournament.",
-                    new short[]{108, 22, 51, 52, 92, 1, 32, 176, 199, 178, 44}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.ladylake.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
+                    new short[]{92, 32, 108, 135, 86, 25, 51, 52, 44, 67, 1, 176, 178}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.ladylake.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
             //Man Fights Bear
             ItemTemplateCreator.createItemTemplate(Constants.HOTA_ManFightingBearTemplateID, "Man and Bear hota statue", "statues", "almost full", "somewhat occupied", "half-full", "emptyish", "This statue is the prize of a Hota tournament.",
-                    new short[]{108, 22, 51, 52, 92, 1, 32, 176, 199, 178, 44}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.manfightingbear.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
+                    new short[]{92, 32, 108, 135, 86, 25, 51, 52, 44, 67, 1, 176, 178}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.manfightingbear.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
             //NoGump
             ItemTemplateCreator.createItemTemplate(Constants.HOTA_NoGumpTemplateID, "Nogump hota statue", "statues", "almost full", "somewhat occupied", "half-full", "emptyish", "This statue is the prize of a Hota tournament.",
-                    new short[]{108, 22, 51, 52, 92, 1, 32, 176, 199, 178, 44}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.nogump.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
+                    new short[]{92, 32, 108, 135, 86, 25, 51, 52, 44, 67, 1, 176, 178}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.nogump.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
             //Scorpion
             ItemTemplateCreator.createItemTemplate(Constants.HOTA_ScorpionTemplateID, "Scorpion hota statue", "statues", "almost full", "somewhat occupied", "half-full", "emptyish", "This statue is the prize of a Hota tournament.",
-                    new short[]{108, 22, 51, 52, 92, 1, 32, 176, 199, 178, 44}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.scorpion.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
+                    new short[]{92, 32, 108, 135, 86, 25, 51, 52, 44, 67, 1, 176, 178}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.scorpion.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
             //Sol Demon
             ItemTemplateCreator.createItemTemplate(Constants.HOTA_SolDemonTemplateID, "Sol Demon hota statue", "statues", "almost full", "somewhat occupied", "half-full", "emptyish", "This statue is the prize of a Hota tournament.",
-                    new short[]{108, 22, 51, 52, 92, 1, 32, 176, 199, 178, 44}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.soldemon.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
+                    new short[]{92, 32, 108, 135, 86, 25, 51, 52, 44, 67, 1, 176, 178}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.soldemon.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
             //Wolf Fights Bison
             ItemTemplateCreator.createItemTemplate(Constants.HOTA_WolfFightingBisonTemplateID, "Wolf and Bison hota statue", "statues", "almost full", "somewhat occupied", "half-full", "emptyish", "This statue is the prize of a Hota tournament.",
-                    new short[]{108, 22, 51, 52, 92, 1, 32, 176, 199, 178, 44}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.wolffightingbison.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
+                    new short[]{92, 32, 108, 135, 86, 25, 51, 52, 44, 67, 1, 176, 178}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.wolffightingbison.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
             //Black Dragon
             ItemTemplateCreator.createItemTemplate(Constants.HOTA_DragonTemplateID, "Dragon hota statue", "statues", "almost full", "somewhat occupied", "half-full", "emptyish", "This statue is the prize of a Hota tournament.",
-                    new short[]{108, 22, 51, 52, 92, 1, 32, 176, 199, 178, 44}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.blackdragon.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
+                    new short[]{92, 32, 108, 135, 86, 25, 51, 52, 44, 67, 1, 176, 178}, (short) 60, (short) 1, 0, 9223372036854775807L, 40, 40, 260, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.hota.blackdragon.", Constants.HOTAStatue_CraftingDifficulty, 150000, (byte) 7);
             //Gnomes
             ItemTemplateCreator.createItemTemplate(Constants.GardenGnomeTemplateID, "garden gnome", "gnomes", "almost full", "somewhat occupied", "half-full", "emptyish", "A small serious gnome stands here ready for christmas.", new short[]{(short) 108, (short) 51, (short) 52, (short) 67, (short) 92, (short) 89, (short) 1, (short) 33, (short) 40, (short) 178}, (short) 60, (short) 1, 0, 604800L, 10, 10, 40, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.garden.", 10.0F, 20000, (byte) 18);
             ItemTemplateCreator.createItemTemplate(Constants.GardenGnomeGreenTemplateID, "green garden gnome", "gnomes", "almost full", "somewhat occupied", "half-full", "emptyish", "A small serious green gnome stands here ready for christmas.", new short[]{(short) 108, (short) 51, (short) 52, (short) 67, (short) 1, (short) 33, (short) 40, (short) 178}, (short) 60, (short) 1, 0, 2419200L, 10, 10, 40, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.garden.green.", 10.0F, 20000, (byte) 18);
@@ -112,6 +113,9 @@ public class AusItemTemplateCreator {
             //Seasonal Items
             ItemTemplateCreator.createItemTemplate(Constants.YuleGoatTemplateID, "yule goat", "goats", "excellent", "good", "ok", "poor", "A popular christmas decoration is a goat made from straw. To be placed by the christmas tree.", new short[]{(short) 108, (short) 51, (short) 52, (short) 40}, (short) 60, (short) 1, 0, 9223372036854775807L, 10, 40, 40, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.bucketthree.", 10.0F, 500, (byte) 70);
             ItemTemplateCreator.createItemTemplate(Constants.YuleRainDeerTemplateID, "yule reindeer", "reindeers", "excellent", "good", "ok", "poor", "This years fad is a reindeer made from straw. Best friend of the yule goat.", new short[]{(short) 108, (short) 51, (short) 52, (short) 40}, (short) 60, (short) 1, 0, 9223372036854775807L, 10, 40, 40, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.bucketfour.", 10.0F, 500, (byte) 70);
+
+            //Cavalier Helmet
+            ItemTemplateCreator.createItemTemplate(Constants.CavalierHelmetTemplateID, 3, "cavalier helmet", "cavalier helmets", "excellent", "good", "ok", "poor", "This special helmet is handed out to a limited number of cavaliers in order for them to inspire and lead their peers.", new short[]{(short) 108, (short) 44, (short) 22, (short) 4, (short) 157}, (short) 967, (short) 1, 0, 9223372036854775807L, 1, 10, 20, -10, new byte[]{(byte) 1, (byte) 28}, "model.armour.head.greathelmWolf.", 10.0F, 1100, (byte) 9, 10000, true, 4);
         } catch (IOException ignored) {
         }
     }

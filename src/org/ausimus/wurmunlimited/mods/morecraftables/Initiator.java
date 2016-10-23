@@ -135,6 +135,7 @@ public class Initiator implements WurmServerMod, ServerStartedListener, ItemTemp
             Constants.YuleGoatTemplateID = Integer.parseInt(properties.getProperty("YuleGoatTemplateID", Integer.toString(Constants.YuleGoatTemplateID)));
             Constants.YuleRainDeerTemplateID = Integer.parseInt(properties.getProperty("YuleRainDeerTemplateID", Integer.toString(Constants.YuleRainDeerTemplateID)));
             //Main Mod Activation
+            Constants.CanCraftCavHelm = Boolean.parseBoolean(properties.getProperty("CanCraftCavHelm", Boolean.toString(Constants.CanCraftCavHelm)));
             Constants.CanCraftSOL = Boolean.parseBoolean(properties.getProperty("CanCraftSOL", Boolean.toString(Constants.CanCraftSOL)));
             Constants.CanCraftMasks = Boolean.parseBoolean(properties.getProperty("CanCraftMasks", Boolean.toString(Constants.CanCraftMasks)));
             Constants.CanCraftChallengeHelms = Boolean.parseBoolean(properties.getProperty("CanCraftChallengeHelms", Boolean.toString(Constants.CanCraftChallengeHelms)));
@@ -149,6 +150,7 @@ public class Initiator implements WurmServerMod, ServerStartedListener, ItemTemp
             Constants.CanCraftPotions = Boolean.parseBoolean(properties.getProperty("CanCraftPotions", Boolean.toString(Constants.CanCraftPotions)));
             Constants.CanCraftSeasonalItems = Boolean.parseBoolean(properties.getProperty("CanCraftSeasonalItems", Boolean.toString(Constants.CanCraftSeasonalItems)));
             Constants.CanCraftGraniteWand = Boolean.parseBoolean(properties.getProperty("CanCraftGraniteWand", Boolean.toString(Constants.CanCraftGraniteWand)));
+            Constants.Debug = Boolean.parseBoolean(properties.getProperty("Debug", Boolean.toString(Constants.Debug)));
             //Spell Shit
             Constants.RechargeCoolDown = Long.parseLong(properties.getProperty("RechargeCoolDown", Long.toString(Constants.RechargeCoolDown)));
             Constants.RechargeDifficulty = Integer.parseInt(properties.getProperty("RechargeDifficulty", Integer.toString(Constants.RechargeDifficulty)));
@@ -161,6 +163,8 @@ public class Initiator implements WurmServerMod, ServerStartedListener, ItemTemp
             Constants.CS_lib = Boolean.parseBoolean(properties.getProperty("CS_lib", Boolean.toString(Constants.CS_lib)));
             Constants.CS_fo = Boolean.parseBoolean(properties.getProperty("CS_fo", Boolean.toString(Constants.CS_fo)));
             Constants.CS_all = Boolean.parseBoolean(properties.getProperty("CS_all", Boolean.toString(Constants.CS_all)));
+            //Cavalier Helmet
+            Constants.CavalierHelmetTemplateID = Integer.parseInt(properties.getProperty("CavalierHelmetTemplateID", Integer.toString(Constants.CavalierHelmetTemplateID)));
             //The End
         }
     }

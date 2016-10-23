@@ -129,5 +129,9 @@ public class AusCreationEntrys {
         if (Constants.CanCraftGraniteWand){
             CreationEntryCreator.createAdvancedEntry(SkillList.MASONRY, ItemList.staffSteel, ItemList.slateShard, ItemList.wandNature, true, true, 0.0f, false, false, CreationCategories.MAGIC);
         }
+        if (Constants.CanCraftCavHelm){
+            CreationEntryCreator.createAdvancedEntry(SkillList.SMITHING_ARMOUR_PLATE, ItemList.blackWolfRug, ItemList.helmetGreat, Constants.CavalierHelmetTemplateID, true, true, 0.0f, false, false, CreationCategories.ARMOUR);
+            new Armour(Constants.CavalierHelmetTemplateID, 0.07F, -0.3F);
+        }
     }
 }
