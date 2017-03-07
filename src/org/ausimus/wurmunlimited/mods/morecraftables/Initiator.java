@@ -1,4 +1,6 @@
 package org.ausimus.wurmunlimited.mods.morecraftables;
+import com.wurmonline.server.behaviours.AusAltarPray;
+import com.wurmonline.server.behaviours.AusAltarSac;
 import com.wurmonline.server.deities.Deities;
 import com.wurmonline.server.deities.Deity;
 import com.wurmonline.server.spells.RechargeTargetItem;
@@ -8,9 +10,16 @@ import org.ausimus.wurmunlimited.mods.morecraftables.items.AusCreationEntrys;
 import org.ausimus.wurmunlimited.mods.morecraftables.items.AusItemTemplateCreator;
 import org.gotti.wurmunlimited.modloader.ReflectionUtil;
 import org.gotti.wurmunlimited.modloader.interfaces.*;
+import org.gotti.wurmunlimited.modsupport.actions.ModActions;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.Properties;
-public class Initiator implements WurmServerMod, ServerStartedListener, ItemTemplatesCreatedListener, Configurable {
+public class Initiator implements WurmServerMod, ServerStartedListener, ItemTemplatesCreatedListener, Configurable, PreInitable {
+
+    @Override
+    public void preInit() {
+        ModActions.init();
+    }
 
     @Override
     public void onItemTemplatesCreated() {
@@ -19,6 +28,8 @@ public class Initiator implements WurmServerMod, ServerStartedListener, ItemTemp
 
     @Override
     public void onServerStarted() {
+        ModActions.registerAction(new AusAltarPray());
+        ModActions.registerAction(new AusAltarSac());
         new AusCreationEntrys();
         new Runnable() {
             @Override
@@ -134,7 +145,23 @@ public class Initiator implements WurmServerMod, ServerStartedListener, ItemTemp
             //Seasonal Items
             Constants.YuleGoatTemplateID = Integer.parseInt(properties.getProperty("YuleGoatTemplateID", Integer.toString(Constants.YuleGoatTemplateID)));
             Constants.YuleRainDeerTemplateID = Integer.parseInt(properties.getProperty("YuleRainDeerTemplateID", Integer.toString(Constants.YuleRainDeerTemplateID)));
+            //Spell Shit
+            Constants.RechargeCoolDown = Long.parseLong(properties.getProperty("RechargeCoolDown", Long.toString(Constants.RechargeCoolDown)));
+            Constants.RechargeDifficulty = Integer.parseInt(properties.getProperty("RechargeDifficulty", Integer.toString(Constants.RechargeDifficulty)));
+            Constants.RechargeLevel = Integer.parseInt(properties.getProperty("RechargeLevel", Integer.toString(Constants.RechargeLevel)));
+            Constants.RechargeCastTimer = Integer.parseInt(properties.getProperty("RechargeCastTimer", Integer.toString(Constants.RechargeCastTimer)));
+            Constants.RechargeCost = Integer.parseInt(properties.getProperty("RechargeCost", Integer.toString(Constants.RechargeCost)));
+            Constants.AddCS = Boolean.parseBoolean(properties.getProperty("AddCS", Boolean.toString(Constants.AddCS)));
+            Constants.CS_vyn = Boolean.parseBoolean(properties.getProperty("CS_vyn", Boolean.toString(Constants.CS_vyn)));
+            Constants.CS_mag = Boolean.parseBoolean(properties.getProperty("CS_mag", Boolean.toString(Constants.CS_mag)));
+            Constants.CS_lib = Boolean.parseBoolean(properties.getProperty("CS_lib", Boolean.toString(Constants.CS_lib)));
+            Constants.CS_fo = Boolean.parseBoolean(properties.getProperty("CS_fo", Boolean.toString(Constants.CS_fo)));
+            Constants.CS_all = Boolean.parseBoolean(properties.getProperty("CS_all", Boolean.toString(Constants.CS_all)));
+            //Cavalier Helmet
+            Constants.CavalierHelmetTemplateID = Integer.parseInt(properties.getProperty("CavalierHelmetTemplateID", Integer.toString(Constants.CavalierHelmetTemplateID)));
             //Main Mod Activation
+            Constants.CanCraftLSpeedItem = Boolean.parseBoolean(properties.getProperty("CanCraftLSpeedItem", Boolean.toString(Constants.CanCraftLSpeedItem)));
+            Constants.CanCraftMagChests = Boolean.parseBoolean(properties.getProperty("CanCraftMagChests", Boolean.toString(Constants.CanCraftMagChests)));
             Constants.CanCraftCavHelm = Boolean.parseBoolean(properties.getProperty("CanCraftCavHelm", Boolean.toString(Constants.CanCraftCavHelm)));
             Constants.CanCraftSOL = Boolean.parseBoolean(properties.getProperty("CanCraftSOL", Boolean.toString(Constants.CanCraftSOL)));
             Constants.CanCraftMasks = Boolean.parseBoolean(properties.getProperty("CanCraftMasks", Boolean.toString(Constants.CanCraftMasks)));
@@ -151,20 +178,9 @@ public class Initiator implements WurmServerMod, ServerStartedListener, ItemTemp
             Constants.CanCraftSeasonalItems = Boolean.parseBoolean(properties.getProperty("CanCraftSeasonalItems", Boolean.toString(Constants.CanCraftSeasonalItems)));
             Constants.CanCraftGraniteWand = Boolean.parseBoolean(properties.getProperty("CanCraftGraniteWand", Boolean.toString(Constants.CanCraftGraniteWand)));
             Constants.Debug = Boolean.parseBoolean(properties.getProperty("Debug", Boolean.toString(Constants.Debug)));
-            //Spell Shit
-            Constants.RechargeCoolDown = Long.parseLong(properties.getProperty("RechargeCoolDown", Long.toString(Constants.RechargeCoolDown)));
-            Constants.RechargeDifficulty = Integer.parseInt(properties.getProperty("RechargeDifficulty", Integer.toString(Constants.RechargeDifficulty)));
-            Constants.RechargeLevel = Integer.parseInt(properties.getProperty("RechargeLevel", Integer.toString(Constants.RechargeLevel)));
-            Constants.RechargeCastTimer = Integer.parseInt(properties.getProperty("RechargeCastTimer", Integer.toString(Constants.RechargeCastTimer)));
-            Constants.RechargeCost = Integer.parseInt(properties.getProperty("RechargeCost", Integer.toString(Constants.RechargeCost)));
-            Constants.AddCS = Boolean.parseBoolean(properties.getProperty("AddCS", Boolean.toString(Constants.AddCS)));
-            Constants.CS_vyn = Boolean.parseBoolean(properties.getProperty("CS_vyn", Boolean.toString(Constants.CS_vyn)));
-            Constants.CS_mag = Boolean.parseBoolean(properties.getProperty("CS_mag", Boolean.toString(Constants.CS_mag)));
-            Constants.CS_lib = Boolean.parseBoolean(properties.getProperty("CS_lib", Boolean.toString(Constants.CS_lib)));
-            Constants.CS_fo = Boolean.parseBoolean(properties.getProperty("CS_fo", Boolean.toString(Constants.CS_fo)));
-            Constants.CS_all = Boolean.parseBoolean(properties.getProperty("CS_all", Boolean.toString(Constants.CS_all)));
-            //Cavalier Helmet
-            Constants.CavalierHelmetTemplateID = Integer.parseInt(properties.getProperty("CavalierHelmetTemplateID", Integer.toString(Constants.CavalierHelmetTemplateID)));
+            //Great Altars
+            Constants.AltarofThreeTemplateID = Integer.parseInt(properties.getProperty("AltarofThreeTemplateID", Integer.toString(Constants.AltarofThreeTemplateID)));
+            Constants.CanCraftGreatAltars = Boolean.parseBoolean(properties.getProperty("CanCraftGreatAltars", Boolean.toString(Constants.CanCraftGreatAltars)));
             //The End
         }
     }

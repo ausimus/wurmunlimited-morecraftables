@@ -126,12 +126,18 @@ public class AusCreationEntrys {
             AdvancedCreationEntry SnowLantern = CreationEntryCreator.createAdvancedEntry(SkillList.SMITHING_GOLDSMITHING, ItemList.anvilLarge, ItemList.silverBar, ItemList.snowLantern, false, true, 0.0f, false, false, CreationCategories.LIGHTS_AND_LAMPS);
             SnowLantern.addRequirement(new CreationRequirement(1, ItemList.silverBar, 10, true));
         }
-        if (Constants.CanCraftGraniteWand){
+        if (Constants.CanCraftGraniteWand) {
             CreationEntryCreator.createAdvancedEntry(SkillList.MASONRY, ItemList.staffSteel, ItemList.slateShard, ItemList.wandNature, true, true, 0.0f, false, false, CreationCategories.MAGIC);
         }
-        if (Constants.CanCraftCavHelm){
+        if (Constants.CanCraftCavHelm) {
             CreationEntryCreator.createAdvancedEntry(SkillList.SMITHING_ARMOUR_PLATE, ItemList.blackWolfRug, ItemList.helmetGreat, Constants.CavalierHelmetTemplateID, true, true, 0.0f, false, false, CreationCategories.ARMOUR);
             new Armour(Constants.CavalierHelmetTemplateID, 0.07F, -0.3F);
+        }
+        if (Constants.CanCraftGreatAltars) {
+            AdvancedCreationEntry AOT = CreationEntryCreator.createAdvancedEntry(SkillList.MASONRY, ItemList.marbleBrick, ItemList.clay, Constants.AltarofThreeTemplateID, true, true, 0.0f, false, false, CreationCategories.ALTAR);
+            AOT.addRequirement(new CreationRequirement(1, ItemList.marbleBrick, 500, true));
+            AOT.addRequirement(new CreationRequirement(2, ItemList.clay, 500, true));
+            AOT.addRequirement(new CreationRequirement(3, ItemList.papyrusSheet, 1, true));
         }
     }
 }

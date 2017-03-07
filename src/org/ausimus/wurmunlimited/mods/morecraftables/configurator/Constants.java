@@ -28,6 +28,9 @@ public class Constants {
     public static boolean CanCraftSeasonalItems;
     public static boolean CanCraftGraniteWand;
     public static boolean CanCraftCavHelm;
+    public static boolean CanCraftMagChests;
+    public static boolean RequireSpell;
+    public static boolean CanCraftLSpeedItem;
     //Debug
     public static boolean Debug;
     //Staff of Land
@@ -109,4 +112,7 @@ public class Constants {
     public static int YuleRainDeerTemplateID;
     //Cavalier Helmet
     public static int CavalierHelmetTemplateID;
+    //GreatAltars
+    public static int AltarofThreeTemplateID;
+    public static boolean CanCraftGreatAltars;
 }

@@ -2,6 +2,7 @@ package org.ausimus.wurmunlimited.mods.morecraftables.items;
 import com.wurmonline.server.MiscConstants;
 import com.wurmonline.server.items.ItemTemplateCreator;
 import com.wurmonline.server.items.ItemTypes;
+import com.wurmonline.shared.constants.ItemMaterials;
 import org.ausimus.wurmunlimited.mods.morecraftables.configurator.Constants;
 import java.io.IOException;
 public class AusItemTemplateCreator {
@@ -32,10 +33,14 @@ public class AusItemTemplateCreator {
             ItemTemplateCreator.createItemTemplate(Constants.PHOH_TemplateID, 3, "plumed helm of the hunt", "plumed helmets", "excellent", "good", "ok", "poor", "An open-faced round-top helm.",
                     new short[]{108, 44, 22, 4}, (short) 966, (short) 1, 0, 3024000L, 1, 10, 20, -10, new byte[]{(byte) 1, (byte) 28}, "model.armour.head.openhelmplumedhunt.", Constants.PHOH_CraftingDifficulty, 1100, (byte) 9, 10000, true, 4);
             //Challenge Statues
-            ItemTemplateCreator.createItemTemplate(Constants.CSG_TemplateID, "challenge statue", "statues", "almost full", "somewhat occupied", "half-full", "emptyish", "The golden statue of challenges.", new short[]{108, 22, 51, 52, 176, 178, 44, 199}, (short) 60, (short) 1, 0, 9223372036854775807L, 20, 30, 160, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.challenge.", Constants.CSG_CraftingDifficulty, 6400, (byte) 7);
-            ItemTemplateCreator.createItemTemplate(Constants.CSS_TemplateID, "challenge statue", "statues", "almost full", "somewhat occupied", "half-full", "emptyish", "The silver statue of challenges.", new short[]{108, 22, 51, 52, 176, 178, 44, 199}, (short) 60, (short) 1, 0, 9223372036854775807L, 20, 30, 160, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.challenge.", Constants.CSS_CraftingDifficulty, 6400, (byte) 8);
-            ItemTemplateCreator.createItemTemplate(Constants.CSB_TemplateID, "challenge statue", "statues", "almost full", "somewhat occupied", "half-full", "emptyish", "The bronze statue of challenges.", new short[]{108, 22, 51, 52, 176, 44, 199}, (short) 60, (short) 1, 0, 9223372036854775807L, 20, 30, 160, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.challenge.", Constants.CSB_CraftingDifficulty, 6400, (byte) 31);
-            ItemTemplateCreator.createItemTemplate(Constants.CSM_TemplateID, "challenge statue", "statues", "almost full", "somewhat occupied", "half-full", "emptyish", "The marble statue of challenges.", new short[]{108, 25, 51, 52, 176, 178, 44, 199}, (short) 60, (short) 1, 0, 9223372036854775807L, 20, 30, 160, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.challenge.", Constants.CSM_CraftingDifficulty, 6400, (byte) 62);
+            ItemTemplateCreator.createItemTemplate(Constants.CSG_TemplateID, "challenge statue", "statues", "almost full", "somewhat occupied", "half-full", "emptyish", "The golden statue of challenges.",
+                    new short[]{108, 22, 51, 52, 178, 44, 199}, (short) 60, (short) 1, 0, 9223372036854775807L, 20, 30, 160, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.challenge.", Constants.CSG_CraftingDifficulty, 6400, (byte) 7);
+            ItemTemplateCreator.createItemTemplate(Constants.CSS_TemplateID, "challenge statue", "statues", "almost full", "somewhat occupied", "half-full", "emptyish", "The silver statue of challenges.",
+                    new short[]{108, 22, 51, 52, 176, 178, 44, 199}, (short) 60, (short) 1, 0, 9223372036854775807L, 20, 30, 160, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.challenge.", Constants.CSS_CraftingDifficulty, 6400, (byte) 8);
+            ItemTemplateCreator.createItemTemplate(Constants.CSB_TemplateID, "challenge statue", "statues", "almost full", "somewhat occupied", "half-full", "emptyish", "The bronze statue of challenges.",
+                    new short[]{108, 22, 51, 52, 176, 44, 199}, (short) 60, (short) 1, 0, 9223372036854775807L, 20, 30, 160, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.challenge.", Constants.CSB_CraftingDifficulty, 6400, (byte) 31);
+            ItemTemplateCreator.createItemTemplate(Constants.CSM_TemplateID, "challenge statue", "statues", "almost full", "somewhat occupied", "half-full", "emptyish", "The marble statue of challenges.",
+                    new short[]{108, 25, 51, 52, 176, 178, 44, 199}, (short) 60, (short) 1, 0, 9223372036854775807L, 20, 30, 160, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.statue.challenge.", Constants.CSM_CraftingDifficulty, 6400, (byte) 62);
             //JK Crown
             ItemTemplateCreator.createItemTemplate(Constants.JKC_TemplateID, 3, "royal crown", "crowns", "excellent", "good", "ok", "poor", "A heavy gold crown covered in blue and green gems.",
                     new short[]{52, 22, 4, 44}, (short) 60, (short) 1, 0, 9223372036854775807L, 5, 20, 20, -10, new byte[]{(byte) 1, (byte) 28}, "model.decoration.crown.", Constants.RC_CraftingDifficulty, 1500, (byte) 7, 5000000, false, 10);
@@ -66,7 +71,7 @@ public class AusItemTemplateCreator {
             ItemTemplateCreator.createItemTemplate(Constants.NewObelisk_TemplateID, "obelisk", "obelisk", "excellent", "good", "ok", "poor", "A large obelisk. These monuments represent the sun.",
                     new short[]{25, 31, 52, 44, 67, 109, 178, 194, 123, 195}, (short) 60, (short) 1, 0, 9223372036854775807L, 100, 100, 1000, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.structure.obelisque.", Constants.NewObelisk_CraftingDifficulty, 1500000, (byte) 15, 10000, false);
             ItemTemplateCreator.createItemTemplate(Constants.NewShrine_TemplateID, "shrine", "shrine", "excellent", "good", "ok", "poor", "A small shrine for worshipping spirits, large enough to enter but not much more.",
-                    new short[]{31, 52, 44, 67, 98, 194, 109, 123}, (short) 60, (short) 1, 0, 9223372036854775807L, 400, 400, 400, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.structure.shrine.", Constants.NewShrine_CraftingDifficulty, 1500000, (byte) 0, 10000, false);
+                    new short[]{31, 52, 44, 67, 194, 109, 195}, (short) 60, (short) 1, 0, 9223372036854775807L, 400, 400, 400, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.structure.shrine.", Constants.NewShrine_CraftingDifficulty, 1500000, (byte) 0, 10000, false);
             ItemTemplateCreator.createItemTemplate(Constants.NewSpiritGate_TemplateID, "spirit gate", "spirit gate", "excellent", "good", "ok", "poor", "These spirit gates marks the transition between the normal world and the sacred. They are usually placed near the entrance to shrines.",
                     new short[]{49, 31, 52, 44, 67, 109, 195, 194, 178}, (short) 60, (short) 1, 0, 9223372036854775807L, 100, 400, 500, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.structure.spiritgate.", Constants.NewSpiritGate_CraftingDifficulty, 500000, (byte) 0, 10000, false);
             //SummerHat
@@ -116,6 +121,25 @@ public class AusItemTemplateCreator {
 
             //Cavalier Helmet
             ItemTemplateCreator.createItemTemplate(Constants.CavalierHelmetTemplateID, 3, "cavalier helmet", "cavalier helmets", "excellent", "good", "ok", "poor", "This special helmet is handed out to a limited number of cavaliers in order for them to inspire and lead their peers.", new short[]{(short) 108, (short) 44, (short) 22, (short) 4, (short) 157}, (short) 967, (short) 1, 0, 9223372036854775807L, 1, 10, 20, -10, new byte[]{(byte) 1, (byte) 28}, "model.armour.head.greathelmWolf.", 10.0F, 1100, (byte) 9, 10000, true, 4);
+
+            //porta preacher (AltarofThree)
+            ItemTemplateCreator.createItemTemplate(Constants.AltarofThreeTemplateID, "Altar of Three", "statues", "almost full", "somewhat occupied", "half-full", "emptyish", "A big Altar.",
+                    new short[]{
+                            ItemTypes.ITEM_TYPE_NAMED,
+                            ItemTypes.ITEM_TYPE_NOTAKE,
+                            ItemTypes.ITEM_TYPE_STONE,
+                            ItemTypes.ITEM_TYPE_TURNABLE,
+                            ItemTypes.ITEM_TYPE_DECORATION,
+                            ItemTypes.ITEM_TYPE_REPAIRABLE,
+                            ItemTypes.ITEM_TYPE_USE_GROUND_ONLY,
+                            ItemTypes.ITEM_TYPE_HOLLOW,
+                            ItemTypes.ITEM_TYPE_DESTROYABLE,
+                            ItemTypes.ITEM_TYPE_TRANSPORTABLE,
+                            ItemTypes.ITEM_TYPE_NEVER_SHOW_CREATION_WINDOW_OPTION,
+                            ItemTypes.ITEM_TYPE_DOMAIN,
+                            ItemTypes.ITEM_TYPE_HASDATA,
+                            ItemTypes.ITEM_TYPE_USE_GROUND_ONLY
+                    }, (short) 60, (short) 1, 0, 9223372036854775807L, 400, 100, 300, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.altar.holy.", 1.0F, 500000, ItemMaterials.MATERIAL_MARBLE);
         } catch (IOException ignored) {
         }
     }

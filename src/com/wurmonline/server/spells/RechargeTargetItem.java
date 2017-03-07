@@ -1,4 +1,5 @@
 package com.wurmonline.server.spells;
+import com.wurmonline.server.items.ItemList;
 import org.ausimus.wurmunlimited.mods.morecraftables.configurator.Constants;
 import org.gotti.wurmunlimited.modsupport.actions.ModActions;
 import com.wurmonline.server.behaviours.ActionEntry;
@@ -61,7 +62,7 @@ public class RechargeTargetItem extends ReligiousSpell
     @Override
     void doEffect(final Skill castSkill, double power, final Creature performer, final Item target)
     {
-        if (target.getTemplateId() == 526)
+        if (target.getTemplateId() == ItemList.wandNature)
         {
             int favorStored = ((int) performer.getFavor());
             target.setAuxData((byte) favorStored);
