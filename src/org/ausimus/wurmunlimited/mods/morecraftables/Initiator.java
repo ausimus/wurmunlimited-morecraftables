@@ -14,59 +14,75 @@ import org.gotti.wurmunlimited.modsupport.actions.ModActions;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Properties;
-public class Initiator implements WurmServerMod, ServerStartedListener, ItemTemplatesCreatedListener, Configurable, PreInitable {
+public class Initiator implements WurmServerMod, ServerStartedListener, ItemTemplatesCreatedListener, Configurable, PreInitable
+{
 
     @Override
-    public void preInit() {
+    public void preInit()
+    {
         ModActions.init();
     }
 
     @Override
-    public void onItemTemplatesCreated() {
+    public void onItemTemplatesCreated()
+    {
         new AusItemTemplateCreator();
     }
 
+    @SuppressWarnings("TrivialFunctionalExpressionUsage")
     @Override
-    public void onServerStarted() {
+    public void onServerStarted()
+    {
         ModActions.registerAction(new AusAltarPray());
         ModActions.registerAction(new AusAltarSac());
         new AusCreationEntrys();
-        new Runnable() {
-            @Override
-            public void run() {
-                if (Constants.AddCS) {
-                    final RechargeTargetItem RechargeTargetItem = new RechargeTargetItem();
-                    try {
-                        ReflectionUtil.callPrivateMethod(Spells.class, ReflectionUtil.getMethod(Spells.class, "addSpell"), RechargeTargetItem);
-                    } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException
-                            | NoSuchMethodException e) {
-                        throw new RuntimeException(e);
+        ((Runnable) () ->
+        {
+            if (Constants.AddCS)
+            {
+                final RechargeTargetItem RechargeTargetItem = new RechargeTargetItem();
+                try
+                {
+                    ReflectionUtil.callPrivateMethod(Spells.class, ReflectionUtil.getMethod(Spells.class, "addSpell"), RechargeTargetItem);
+                }
+                catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException
+                        | NoSuchMethodException e)
+                {
+                    throw new RuntimeException(e);
+                }
+                if (Constants.CS_all)
+                {
+                    for (final Deity deity : Deities.getDeities())
+                    {
+                        deity.addSpell(RechargeTargetItem);
                     }
-                    if (Constants.CS_all) {
-                        for (final Deity deity : Deities.getDeities()) {
-                            deity.addSpell(RechargeTargetItem);
-                        }
-                    } else {
-                        if (Constants.CS_fo) {
-                            Deities.getDeity(Deities.DEITY_FO).addSpell(RechargeTargetItem);
-                        }
-                        if (Constants.CS_mag) {
-                            Deities.getDeity(Deities.DEITY_MAGRANON).addSpell(RechargeTargetItem);
-                        }
-                        if (Constants.CS_vyn) {
-                            Deities.getDeity(Deities.DEITY_VYNORA).addSpell(RechargeTargetItem);
-                        }
-                        if (Constants.CS_lib) {
-                            Deities.getDeity(Deities.DEITY_LIBILA).addSpell(RechargeTargetItem);
-                        }
+                }
+                else
+                {
+                    if (Constants.CS_fo)
+                    {
+                        Deities.getDeity(Deities.DEITY_FO).addSpell(RechargeTargetItem);
+                    }
+                    if (Constants.CS_mag)
+                    {
+                        Deities.getDeity(Deities.DEITY_MAGRANON).addSpell(RechargeTargetItem);
+                    }
+                    if (Constants.CS_vyn)
+                    {
+                        Deities.getDeity(Deities.DEITY_VYNORA).addSpell(RechargeTargetItem);
+                    }
+                    if (Constants.CS_lib)
+                    {
+                        Deities.getDeity(Deities.DEITY_LIBILA).addSpell(RechargeTargetItem);
                     }
                 }
             }
-        }.run();
+        }).run();
     }
 
     @Override
-    public void configure(Properties properties) {
+    public void configure(Properties properties)
+    {
         {
             //Staff of Land
             Constants.SOL_TemplateID = Integer.parseInt(properties.getProperty("SOL_TemplateID", Integer.toString(Constants.SOL_TemplateID)));

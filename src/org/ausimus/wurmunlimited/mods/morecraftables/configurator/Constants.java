@@ -1,5 +1,6 @@
 package org.ausimus.wurmunlimited.mods.morecraftables.configurator;
-public class Constants {
+public class Constants
+{
     //Spell Shit
     public static boolean AddCS;
     public static boolean CS_all;

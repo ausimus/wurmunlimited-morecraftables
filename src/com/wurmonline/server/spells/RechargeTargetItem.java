@@ -25,9 +25,10 @@ public class RechargeTargetItem extends ReligiousSpell
         this.description = "Recharges an item.";
         this.effectdesc = "blah, blah, blah, yacady, smackady.";
         ActionEntry actionEntry = ActionEntry.createEntry((short) number, name, "Recharging",
-                new int[]{2 ,36,48});
+                new int[]{2, 36, 48});
         ModActions.registerAction(actionEntry);
     }
+
     @Override
     boolean precondition(final Skill castSkill, final Creature performer, final Item target)
     {
@@ -54,11 +55,13 @@ public class RechargeTargetItem extends ReligiousSpell
             return false;
         }
     }
+
     @Override
     boolean precondition(final Skill castSkill, final Creature performer, final Creature target)
     {
         return false;
     }
+
     @Override
     void doEffect(final Skill castSkill, double power, final Creature performer, final Item target)
     {
@@ -69,7 +72,8 @@ public class RechargeTargetItem extends ReligiousSpell
             try
             {
                 performer.setFavor(performer.getFavor() - (float) favorStored);
-            } catch (IOException var9)
+            }
+            catch (IOException var9)
             {
                 logger.log(Level.WARNING, performer.getName() + ":" + var9.getMessage(), var9);
             }

@@ -5,9 +5,12 @@ import com.wurmonline.server.items.ItemTypes;
 import com.wurmonline.shared.constants.ItemMaterials;
 import org.ausimus.wurmunlimited.mods.morecraftables.configurator.Constants;
 import java.io.IOException;
-public class AusItemTemplateCreator {
-    public AusItemTemplateCreator() {
-        try {
+public class AusItemTemplateCreator
+{
+    public AusItemTemplateCreator()
+    {
+        try
+        {
             //Staff of Land
             ItemTemplateCreator.createItemTemplate(Constants.SOL_TemplateID, "staff of land", "staves", "fresh", "dry", "brittle", "rotten", "A rare and masterfully crafted staff. The staff looks intimidating and though the finer detailing looks brittle at first, it is surprisingly strong and sharp.",
                     new short[]{44, 133, 22, 14, 37, 84}, (short) 646, (short) 1, 45, 9223372036854775807L, 3, 4, 150, 10090, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.weapon.staffOfLand.", Constants.SOL_CraftingDifficulty, 3000, (byte) 9, 10000, true);
@@ -140,7 +143,9 @@ public class AusItemTemplateCreator {
                             ItemTypes.ITEM_TYPE_HASDATA,
                             ItemTypes.ITEM_TYPE_USE_GROUND_ONLY
                     }, (short) 60, (short) 1, 0, 9223372036854775807L, 400, 100, 300, -10, MiscConstants.EMPTY_BYTE_PRIMITIVE_ARRAY, "model.decoration.altar.holy.", 1.0F, 500000, ItemMaterials.MATERIAL_MARBLE);
-        } catch (IOException ignored) {
+        }
+        catch (IOException ignored)
+        {
         }
     }
 }
