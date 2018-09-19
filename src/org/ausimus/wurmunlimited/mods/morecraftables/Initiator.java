@@ -29,55 +29,43 @@ public class Initiator implements WurmServerMod, ServerStartedListener, ItemTemp
         new AusItemTemplateCreator();
     }
 
-    @SuppressWarnings("TrivialFunctionalExpressionUsage")
     @Override
-    public void onServerStarted()
-    {
+    public void onServerStarted() {
         ModActions.registerAction(new AusAltarPray());
         ModActions.registerAction(new AusAltarSac());
         new AusCreationEntrys();
-        ((Runnable) () ->
-        {
-            if (Constants.AddCS)
-            {
-                final RechargeTargetItem RechargeTargetItem = new RechargeTargetItem();
-                try
-                {
-                    ReflectionUtil.callPrivateMethod(Spells.class, ReflectionUtil.getMethod(Spells.class, "addSpell"), RechargeTargetItem);
-                }
-                catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException
-                        | NoSuchMethodException e)
-                {
-                    throw new RuntimeException(e);
-                }
-                if (Constants.CS_all)
-                {
-                    for (final Deity deity : Deities.getDeities())
-                    {
-                        deity.addSpell(RechargeTargetItem);
+        new Runnable() {
+            @Override
+            public void run() {
+                if (Constants.AddCS) {
+                    final RechargeTargetItem RechargeTargetItem = new RechargeTargetItem();
+                    try {
+                        ReflectionUtil.callPrivateMethod(Spells.class, ReflectionUtil.getMethod(Spells.class, "addSpell"), RechargeTargetItem);
+                    } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException
+                            | NoSuchMethodException e) {
+                        throw new RuntimeException(e);
                     }
-                }
-                else
-                {
-                    if (Constants.CS_fo)
-                    {
-                        Deities.getDeity(Deities.DEITY_FO).addSpell(RechargeTargetItem);
-                    }
-                    if (Constants.CS_mag)
-                    {
-                        Deities.getDeity(Deities.DEITY_MAGRANON).addSpell(RechargeTargetItem);
-                    }
-                    if (Constants.CS_vyn)
-                    {
-                        Deities.getDeity(Deities.DEITY_VYNORA).addSpell(RechargeTargetItem);
-                    }
-                    if (Constants.CS_lib)
-                    {
-                        Deities.getDeity(Deities.DEITY_LIBILA).addSpell(RechargeTargetItem);
+                    if (Constants.CS_all) {
+                        for (final Deity deity : Deities.getDeities()) {
+                            deity.addSpell(RechargeTargetItem);
+                        }
+                    } else {
+                        if (Constants.CS_fo) {
+                            Deities.getDeity(Deities.DEITY_FO).addSpell(RechargeTargetItem);
+                        }
+                        if (Constants.CS_mag) {
+                            Deities.getDeity(Deities.DEITY_MAGRANON).addSpell(RechargeTargetItem);
+                        }
+                        if (Constants.CS_vyn) {
+                            Deities.getDeity(Deities.DEITY_VYNORA).addSpell(RechargeTargetItem);
+                        }
+                        if (Constants.CS_lib) {
+                            Deities.getDeity(Deities.DEITY_LIBILA).addSpell(RechargeTargetItem);
+                        }
                     }
                 }
             }
-        }).run();
+        }.run();
     }
 
     @Override
